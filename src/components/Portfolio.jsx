@@ -355,7 +355,7 @@ const Portfolio = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
             <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-full font-bold text-xl transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 overflow-hidden">
-              <a href="mailto:zahidliomer@gmail.com" className="relative z-10 flex items-center gap-4">
+              <a href="mailto:owner@omerzh.uk" className="relative z-10 flex items-center gap-4">
                 <Mail className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                   E-MAIL ME
                 <Sparkles className="w-6 h-6 group-hover:rotate-180 transition-transform duration-500" />
