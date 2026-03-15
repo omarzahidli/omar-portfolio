@@ -230,7 +230,7 @@ const Portfolio = () => {
             </GlitchText>
             <div className="text-4xl md:text-6xl font-bold mb-6 relative">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
-                FullStack-Developer
+                FrontEnd-Developer
               </span>
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full animate-ping" />
             </div>
