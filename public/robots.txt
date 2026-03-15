@@ -1,0 +1,6 @@
+# Allow all search engines
+User-agent: *
+Disallow:
+
+# Link to sitemap
+Sitemap: https://omerzh.uk/sitemap.xml

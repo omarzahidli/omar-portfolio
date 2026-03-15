@@ -6,8 +6,8 @@ import Portfolio from './components/Portfolio'
 
 const router = createBrowserRouter([
     {path: '/', element: <App />, children: [
-        {index: true, element: <Navigate to='/main' />},
-        {path: '/main', element: <Portfolio />},
+        {index: true, element: <Navigate to='/portfolio' />},
+        {path: '/portfolio', element: <Portfolio />},
         {path: '*', element: <Error />}
     ]}
 ])
