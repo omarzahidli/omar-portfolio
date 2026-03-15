@@ -151,6 +151,25 @@ const Portfolio = () => {
       </span>
     </div>
   );
+
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      window.addEventListener('click', handleOutsideClick);
+    }
+
+    return () => {
+      window.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
       <div className="fixed inset-0 z-0">
@@ -175,9 +194,9 @@ const Portfolio = () => {
           }}
         />
       </div>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+      <nav ref={menuRef} className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between items-center">
             <a href="#about" title="Home">
               <GlitchText className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 OMAR ZAHIDLI
@@ -197,11 +216,11 @@ const Portfolio = () => {
                 </a>
               ))}
             </div>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-white relative pe-4">
-              <div className="relative">
-                <span className={`absolute block w-6 h-0.5 bg-white transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'}`} />
-                <span className={`absolute block w-6 h-0.5 bg-white transform transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <span className={`absolute block w-6 h-0.5 bg-white transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'}`} />
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-white p-2 rounded-md hover:bg-white/10" aria-label="Toggle menu">
+              <div className="relative w-6 h-6">
+                <span className={`block absolute left-0 right-0 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'top-2.5 rotate-45' : 'top-0'}`} />
+                <span className={`block absolute left-0 right-0 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'top-2.5 opacity-100'}`} />
+                <span className={`block absolute left-0 right-0 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'top-2.5 -rotate-45' : 'top-5'}`} />
               </div>
             </button>
           </div>
