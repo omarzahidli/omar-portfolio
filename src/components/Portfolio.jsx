@@ -43,6 +43,7 @@ const Portfolio = () => {
       color: "from-green-500 via-teal-500 to-blue-500",
       bgColor: "from-purple-900/20 to-pink-900/20",
       img: "../../assets/img/starbucks.png",
+      alt: "Starbucks Clone Website",
       link: "https://starbucks-clone-theta-rosy.vercel.app/"
     },
     {
@@ -52,6 +53,7 @@ const Portfolio = () => {
       color: "from-blue-500 via-cyan-500 to-teal-500",
       bgColor: "from-blue-900/20 to-cyan-900/20",
       img: "../../assets/img/techcare.png",
+      alt: "TechCare Medical Website",
       link: "https://techcare-three.vercel.app/"
     },
     {
@@ -61,6 +63,7 @@ const Portfolio = () => {
       color: "from-red-500 via-pink-500 to-blue-500",
       bgColor: "from-green-900/20 to-emerald-900/20",
       img: "../../assets/img/parkcinema.png",
+      alt: "ParkCinema Clone Website",
       link: "https://park-cinema-nine.vercel.app/"
     },
     {
@@ -70,6 +73,7 @@ const Portfolio = () => {
       color: "from-yellow-500 via-orange-500 to-red-500",
       bgColor: "from-yellow-900/20 to-orange-900/20",
       img: "../../assets/img/pizza.png",
+      alt: "Pizza App",
       link: "https://omarzahidli.github.io/PizzaApp/#/menu"
     },
     {
@@ -79,6 +83,7 @@ const Portfolio = () => {
       color: "from-blue-500 via-teal-500 to-blue-200",
       bgColor: "from-purple-900/20 to-pink-900/20",
       img: "../../assets/img/docmed.png",
+      alt: "Docmed Medical Website Template",
       link: "https://docmed-html-css-bootstrap.vercel.app/"
     },
     {
@@ -88,6 +93,7 @@ const Portfolio = () => {
       color: "from-red-500 via-pink-500 to-blue-500",
       bgColor: "from-blue-900/20 to-cyan-900/20",
       img: "../../assets/img/todo.png",
+      alt: "Todo App",
       link: "https://omarzahidli.github.io/TodoApp/"
     },
     {
@@ -97,6 +103,7 @@ const Portfolio = () => {
       color: "from-violet-500 via-red-500 to-purple-500",
       bgColor: "from-blue-900/20 to-cyan-900/20",
       img: "../../assets/img/ems.png",
+      alt: "Employee Management System",
       link: "https://omarzahidli.github.io/IsciIdareEtmeSistemi/"
     },
     {
@@ -106,6 +113,7 @@ const Portfolio = () => {
       color: "from-blue-500 via-cyan-500 to-teal-500",
       bgColor: "from-blue-900/20 to-cyan-900/20",
       img: "../../assets/img/polo.png",
+      alt: "Polo360 Website Template",
       link: "https://polo360-website-template-using-display-float.vercel.app/"
     },
   ];
@@ -330,7 +338,7 @@ const Portfolio = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="relative z-10 p-10">
                   <div className="text-8xl mb-8 transform group-hover:scale-110transition-transform duration-500 group-hover:animate-pulse ">
-                    <img className='rounded-2xl' src={project.img} alt={project.name} />
+                    <img className='rounded-2xl' src={project.img} alt={project.alt} />
                   </div>
                   <h3 className="text-3xl font-black mb-6 text-white group-hover:text-white transition-colors duration-300">
                     <span className={`bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}>
